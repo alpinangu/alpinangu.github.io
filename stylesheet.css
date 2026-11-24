@@ -476,27 +476,24 @@ body { font-size: 16px; }
   text-align: center;
 }
 
+/* Larger circular portrait */
 .bio-photo {
-  flex: 0 0 300px;
-  width: 300px;
+  flex: 0 0 380px;
+  width: 380px;
   padding: 0;
 }
 
 .bio-photo img {
   display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1;
+  width: 380px;
+  height: 380px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center 75%;
 }
 
-@media (max-width: 700px) {
-  .page {
-    padding: 24px 20px;
-  }
-
+/* Smaller screens */
+@media (max-width: 900px) {
   .bio {
     flex-direction: column;
     gap: 28px;
@@ -506,18 +503,14 @@ body { font-size: 16px; }
     width: 100%;
   }
 
-  .name {
-    font-size: 36px;
-  }
-
   .bio-photo {
     flex: none;
-    width: 240px;
-    max-width: 100%;
+    width: min(300px, 100%);
   }
 
   .bio-photo img {
     width: 100%;
-    margin: 0;
+    height: auto;
+    aspect-ratio: 1 / 1;
   }
 }
