@@ -601,3 +601,24 @@ body { font-size: 16px; }
     font-size: 15px;
   }
 }
+
+.project {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 36px;
+}
+
+.project-image {
+  width: 160px;
+  height: 160px;
+  overflow: hidden;
+}
+
+.project-image img {
+  display: block;
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+}
