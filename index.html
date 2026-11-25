@@ -175,5 +175,32 @@
       </section>
 
     </main>
+
+    <div id="lightbox" class="lightbox">
+      <img id="lightbox-image" alt="Expanded project image">
+    </div>
+    
+    <script>
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImage = document.getElementById('lightbox-image');
+    
+      document.querySelectorAll('.project-image img').forEach(img => {
+        img.addEventListener('click', () => {
+          lightboxImage.src = img.src;
+          lightboxImage.alt = img.alt;
+          lightbox.classList.add('active');
+        });
+      });
+    
+      lightbox.addEventListener('click', () => {
+        lightbox.classList.remove('active');
+      });
+    
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape') {
+          lightbox.classList.remove('active');
+        }
+      });
+    </script>
   </body>
 </html>
