@@ -64,14 +64,115 @@
           </a>
         </div>
       </header>
-      <!-- Add your research, projects, and other sections below.
-           The original section-header, papers, and paper styles remain available.
-           Example:
-           <section class="section-header">
-             <h2>Research</h2>
-             <p>Your research interests.</p>
-           </section>
-      -->
+      
+      <section class="projects">
+        <h2 class="projects-heading">Projects</h2>
+
+        <!-- NEST Simulator -->
+        <article class="project">
+          <div class="project-image">
+            <img src="images/nest.png" alt="NEST Simulator">
+          </div>
+
+          <div class="project-content">
+            <a class="project-title" href="https://nest-simulator.org/">
+              NEST Simulator
+            </a>
+
+            <div class="project-meta">
+              Contributor · High-Performance Computing
+            </div>
+
+            <div class="project-links">
+              <a href="https://nest-simulator.org/">website</a> /
+              <a href="https://github.com/nest/nest-simulator">code</a> /
+              <a href="https://nest-simulator.readthedocs.io/">documentation</a>
+            </div>
+
+            <p>
+              NEST is an open-source simulator for large-scale spiking neural
+              networks. My work focuses on performance analysis
+              and hardware-aware optimization of neural simulations on
+              conventional supercomputers, including JUPITER, with the aim
+              of advancing performance baselines for neuromorphic computing.
+            </p>
+          </div>
+        </article>
+
+        <!-- NUMA Balancing -->
+        <article class="project">
+          <div class="project-image">
+            <img src="images/numa-balancing.png"
+                alt="Simulation cycle-time heatmaps">
+          </div>
+
+          <div class="project-content">
+            <a class="project-title" href="https://arxiv.org/abs/2607.22275">
+              NUMA balancing hampering performance of spiking network simulations
+            </a>
+
+            <div class="project-authors">
+              Melissa Lober, <strong>Alp Inangu</strong>,
+              Gorka Peraza Coppola, Dennis Terhorst, Sebastian Gillessen,
+              Jan Vogelsang, Hans Ekkehard Plesser, Brian Wylie,
+              Benedikt Steinbusch, Guido Trensch, Susanne Kunkel,
+              Markus Diesmann
+            </div>
+
+            <div class="project-meta">
+              <em>arXiv</em>, 2026
+            </div>
+
+            <div class="project-links">
+              <a href="https://arxiv.org/abs/2607.22275">arXiv</a> /
+              <a href="https://arxiv.org/pdf/2607.22275">paper</a>
+            </div>
+
+            <p>
+              We investigate how the interaction between Linux's automatic
+              NUMA balancing and memory allocation affects the performance
+              of distributed spiking neural network simulations. Our results
+              show that disabling automatic NUMA balancing can reduce energy
+              consumption by approximately 30%, leading to the introduction
+              of a user-configurable Slurm option at the Jülich Supercomputing
+              Centre.
+            </p>
+          </div>
+        </article>
+
+        <!-- NEST Interact -->
+        <article class="project">
+          <div class="project-image">
+            <img src="images/nest-interact.png" alt="NEST Interact">
+          </div>
+
+          <div class="project-content">
+            <span class="project-title">
+              NEST Interact
+            </span>
+
+            <div class="project-meta">
+              Research Software · 2026
+            </div>
+
+            <div class="project-links">
+              <em>Upcoming release</em>
+            </div>
+
+            <p>
+              A middleware framework for coupling spiking neural network
+              simulators with external environments, enabling closed-loop
+              experiments. Building on the MUSIC runtime, I redesigned 
+              its architecture around a standalone C++
+              library with Python bindings, and developed an
+              encoder–decoder interface that simplifies signal exchange
+              between neural agents and their environments.
+            </p>
+          </div>
+        </article>
+
+      </section>
+
     </main>
   </body>
 </html>
